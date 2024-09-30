@@ -23,3 +23,10 @@ soup = BeautifulSoup(r.text, 'html.parser')
 # #conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(1) > div.rank_cntt > div.rank_info > p > a
 title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(1) > div.rank_cntt > div.rank_info > p > a')
 print(title.text)
+
+
+# 전체 곡의 제목을 가져오기
+titles = soup.select('#conts > div.chart > div > ul > li > div > ul > li > div.rank_cntt > div.rank_info > p > a')
+
+for title in titles:
+    print(title.text)
