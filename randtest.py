@@ -25,7 +25,7 @@ title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul >
 print(title.text)
 
 
-# 전체 곡의 제목을 가져오기
+# 멜론 차트 100 가져오기
 titles = soup.select('#conts > div.chart > div > ul > li > div > ul > li > div.rank_cntt > div.rank_info > p > a')
 
 for title in titles:
