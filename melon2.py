@@ -24,7 +24,7 @@ for t in title:
 
 # 가수 리스트 만들기
 alist = []
-artist = soup.select('div.ellipsis.rank02 > span >a')
+artist = soup.select('div.ellipsis.rank02 > span > a:nth-child(1)')
 for a in artist:
     alist.append(a.text)
 
@@ -32,4 +32,4 @@ df3 = pd.DataFrame({'순위': rank,
                     '제목': tlist,
                     '가수': alist})
 
-df3.to_csy('melon100.csv', index=False)
+df3.to_csv('melon100.csv', index=False)
